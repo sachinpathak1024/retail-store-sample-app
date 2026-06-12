@@ -109,22 +109,23 @@ ingresses:
       nginx.ingress.kubernetes.io/proxy-read-timeout: "600"
     tls: []
   # Domain-based access with SSL
-  - name: domain
-    className: "nginx"
-    hosts:
-      - retail-store.trainwithshubham.com
-    annotations:
-      nginx.ingress.kubernetes.io/ssl-redirect: "true"
-      nginx.ingress.kubernetes.io/force-ssl-redirect: "true"
-      cert-manager.io/cluster-issuer: "letsencrypt-prod"
-      nginx.ingress.kubernetes.io/proxy-body-size: "8m"
-      nginx.ingress.kubernetes.io/proxy-connect-timeout: "30"
-      nginx.ingress.kubernetes.io/proxy-send-timeout: "600"
-      nginx.ingress.kubernetes.io/proxy-read-timeout: "600"
-    tls:
-      - secretName: tls-secret
-        hosts:
-          - retail-store.trainwithshubham.com
+  # Enable this only when you own a domain and have pointed DNS to the NGINX load balancer.
+  # - name: domain
+  #   className: "nginx"
+  #   hosts:
+  #     - retail-store.example.com
+  #   annotations:
+  #     nginx.ingress.kubernetes.io/ssl-redirect: "true"
+  #     nginx.ingress.kubernetes.io/force-ssl-redirect: "true"
+  #     cert-manager.io/cluster-issuer: "letsencrypt-prod"
+  #     nginx.ingress.kubernetes.io/proxy-body-size: "8m"
+  #     nginx.ingress.kubernetes.io/proxy-connect-timeout: "30"
+  #     nginx.ingress.kubernetes.io/proxy-send-timeout: "600"
+  #     nginx.ingress.kubernetes.io/proxy-read-timeout: "600"
+  #   tls:
+  #     - secretName: tls-secret
+  #       hosts:
+  #         - retail-store.example.com
 
 # Cert Manager Configuration
 certManager:
