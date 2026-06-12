@@ -4,7 +4,7 @@
 
 replicaCount: 1
 image:
-  repository: 626072240565.dkr.ecr.us-west-2.amazonaws.com/retail-store-orders
+  repository: 704811216624.dkr.ecr.us-west-2.amazonaws.com/retail-store-orders
   pullPolicy: Always
   tag: "db791a4"
 imagePullSecrets:
@@ -79,7 +79,7 @@ app:
 postgresql:
   create: false
   image:
-    repository: 220755213644.dkr.ecr.us-west-2.amazonaws.com/retail-store-orders
+    repository: 704811216624.dkr.ecr.us-west-2.amazonaws.com/retail-store-orders
     pullPolicy: IfNotPresent
     tag: "3b4d73a"
   service:
@@ -100,7 +100,7 @@ postgresql:
 rabbitmq:
   create: false
   image:
-    repository: 220755213644.dkr.ecr.us-west-2.amazonaws.com/retail-store-orders
+    repository: 704811216624.dkr.ecr.us-west-2.amazonaws.com/retail-store-orders
     pullPolicy: IfNotPresent
     tag: "3b4d73a"
   service:

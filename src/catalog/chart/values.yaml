@@ -4,7 +4,7 @@
 
 replicaCount: 1
 image:
-  repository: 626072240565.dkr.ecr.us-west-2.amazonaws.com/retail-store-catalog
+  repository: 704811216624.dkr.ecr.us-west-2.amazonaws.com/retail-store-catalog
   pullPolicy: Always
   tag: "db791a4"
 imagePullSecrets:
@@ -70,7 +70,7 @@ app:
 mysql:
   create: false
   image:
-    repository: 220755213644.dkr.ecr.us-west-2.amazonaws.com/retail-store-catalog
+    repository: 704811216624.dkr.ecr.us-west-2.amazonaws.com/retail-store-catalog
     pullPolicy: IfNotPresent
     tag: "0fd57ea"
   service:
