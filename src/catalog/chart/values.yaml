@@ -7,8 +7,6 @@ image:
   repository: 704811216624.dkr.ecr.us-west-2.amazonaws.com/retail-store-catalog
   pullPolicy: Always
   tag: "db791a4"
-imagePullSecrets:
-  - name: regcred
 nameOverride: ""
 fullnameOverride: ""
 serviceAccount:
